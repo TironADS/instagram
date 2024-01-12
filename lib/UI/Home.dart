@@ -244,10 +244,10 @@ class _HomeState extends State<Home> {
                           crossAxisCount: 3,
                           shrinkWrap: true,
                               children: List.generate(
-                                  data.edgeOwnerToTimelineMedia!.count.toString().length , (index) {
+                                  data.edgeOwnerToTimelineMedia!.edges![0].node!.thumbnailResources!.length , (index) {
                                 return Container(
 
-                                  child: Image.network( data.edgeOwnerToTimelineMedia!.edges![0].node!.thumbnailResources![4].src.toString(),fit: BoxFit.fill,),
+                                  child: Image.network( data.edgeOwnerToTimelineMedia!.edges![index].node!.thumbnailResources![4].src.toString(),fit: BoxFit.fill,),
 
                                 );
                               }),
